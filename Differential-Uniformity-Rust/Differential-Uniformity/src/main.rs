@@ -169,8 +169,9 @@ impl PartialEq for BVector {
 }
 
 
-// This is needed for hashing, and I need two vectors with the same elements and the same dimensions to have the same hash
-// as I'm planning to use hashmaps
+// ~~This is needed for hashing, and I need two vectors with the same elements and the same dimensions to have the same hash
+// as I'm planning to use hashmaps~~
+// Woof. That was a bad idea...
 impl Hash for BVector {
     fn hash<H: Hasher>(&self, state: &mut H) {
         self.dim.hash(state);
