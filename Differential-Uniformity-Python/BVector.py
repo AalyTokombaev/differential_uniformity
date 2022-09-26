@@ -17,7 +17,7 @@ class BVector:
     
 
     def __add__(self, other):
-        """Rerturns the sum of two BVectors"""
+        """Returns the sum of two BVectors"""
         # Check if the dimension of the vectors being added is the same 
         if other.dim != self.dim:
             raise ValueError(f"Can't add vectors of different sizes: {self.dim} and {other.dim}")
